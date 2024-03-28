@@ -24,7 +24,7 @@ def split_condition(code: str) -> Tuple[str, str]:
 
 if __name__ == "__main__":
     # Path to the ICD-10-CM codes file
-    file_path = r'C:\Users\Kosaraju\Documents\GitHub\ICD-10-CM\data\icd10cm_codes_2024.txt'
+    file_path = r'data\icd10cm_codes_2024.txt'
     
     # Define the widths of the columns in the fixed-width file
     col_widths = [8, 1000]  # Column widths as specified in the file format
@@ -46,7 +46,7 @@ if __name__ == "__main__":
     df[['icd_3', 'icd_4']] = df.apply(lambda row: pd.Series(split_condition(row['Code'])), axis=1)
 
     # Save the DataFrame to a CSV file
-    csv_file_path = r'C:\Users\Kosaraju\Documents\GitHub\ICD-10-CM\data\icd10cm_codes_csv_2024.csv'
+    csv_file_path = r'data\filtered\icd10cm_codes_csv_2024.csv'
     df.to_csv(csv_file_path, index=False)
 
     # Optionally, print a message to confirm the file has been saved

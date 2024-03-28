@@ -47,7 +47,7 @@ if __name__ == "__main__":
     df[['icd_3', 'icd_4']] = df.apply(lambda row: pd.Series(split_condition(row['Code'])), axis=1)
 
     # Save the DataFrame to a CSV file
-    csv_file_path = r'data\icd10cm_order_csv_2024.csv'
+    csv_file_path = r'data\filtered\icd10cm_order_csv_2024.csv'
     df.to_csv(csv_file_path, index=False)
     a, b, c, d = df.icd_1.unique().shape[0], df.icd_2.unique().shape[0], df.icd_3.unique().shape[0], df.icd_4.unique().shape[0]
     print(f"Unique values summary:\n"

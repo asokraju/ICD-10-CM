@@ -85,7 +85,7 @@ def extract_icd_codes(processed_lines: List[str]) -> List[Dict[str, str]]:
 
 if __name__ == "__main__":
     # Specify the path to the ICD-10-CM PDF file
-    pdf_path = r'C:\Users\Kosaraju\Documents\GitHub\ICD-10-CM\data\ICD-10-CMS.pdf'
+    pdf_path = r'data\ICD-10-CMS.pdf'
 
     # Initialize an empty list to hold all the extracted ICD codes
     all_codes = []
