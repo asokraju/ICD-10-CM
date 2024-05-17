@@ -1,5 +1,7 @@
 /data/Loinc_2.77
 /data/data_2024
+.conda
+/data/icd10cm-Table-and-Index-2024
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
