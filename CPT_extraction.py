@@ -3,6 +3,12 @@ import requests
 import zipfile
 import os
 
+#
+# This contain both HCPCS - I (CPT codes) and HCPCS -II codes
+# HCPCS - I or CPT : Describe outpatient services and procedures
+# HCPCS -II: Providers generally use codes for equipments, drugs, and supplies for services and treatment.
+# 
+
 os.makedirs('data', exist_ok=True)  # For the zip file
 os.makedirs('data/data_2024', exist_ok=True)  # For the extracted files
 os.makedirs('data/filtered', exist_ok=True)  # For the final filtered file
